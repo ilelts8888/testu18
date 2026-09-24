@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Kiểm Tra Tiếng Anh Unit 18 - Ms Lê Hằng English</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #8854C0, #FDCB6E, #00C9A7, #FF7675, #6C5CE7);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            padding: 20px 10px 60px 10px;
+            color: #2d3436;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .bg-patterns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.25;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><g fill="%23FFFFFF"><path d="M20 10l3 6 6 3-6 3-3 6-3-6-6-3 6-3z"/><circle cx="80" cy="30" r="8"/><path d="M100 80c0 5-5 10-10 10s-10-5-10-10 5-10 10-10 10 5 10 10z"/><path d="M30 90l5-10 10 5-5 10z"/><path d="M70 100l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></g></svg>');
+            animation: floatPatterns 20s linear infinite;
+        }
+
+        @keyframes floatPatterns {
+            from { background-position: 0 0; }
+            to { background-position: 120px 240px; }
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .teacher-badge {
+            display: inline-block;
+            background: #ffffff;
+            color: #6C5CE7;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+            border: 2px solid #6C5CE7;
+            transform: rotate(-1deg);
+        }
+
+        .main-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 2px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 12px;
+        }
+
+        .reminder-card {
+            background: #FFF9E6;
+            border: 3px solid #FFEAA7;
+            border-left: 8px solid #FDCB6E;
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .reminder-title {
+            color: #D63031;
+            font-weight: 900;
+            font-size: 17px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .reminder-text {
+            color: #2d3436;
+            font-size: 14.5px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        .reminder-highlight {
+            display: block;
+            margin-top: 8px;
+            color: #6C5CE7;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .question-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            border: 3px solid #F0F0F0;
+            transition: transform 0.2s ease;
+            position: relative;
+        }
+
+        .q-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            border-bottom: 2px dashed #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .q-number {
+            background: #6C5CE7;
+            color: white;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 4px 14px;
+            border-radius: 12px;
+            box-shadow: 0 3px 0 #4b38b3;
+        }
+
+        .q-type {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #b2bec3;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .q-text {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .q-text u {
+            color: #e84393;
+            font-weight: 900;
+            text-decoration-color: #e84393;
+            text-decoration-thickness: 3px;
+            padding: 0 2px;
+        }
+
+        .q-text b {
+            color: #6C5CE7;
+            font-weight: 900;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .opt-btn {
+            background: #F8F9FA;
+            border: 2px solid #E9ECEF;
+            border-bottom: 5px solid #DEE2E6;
+            border-radius: 18px;
+            padding: 13px 16px;
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #495057;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            outline: none;
+            user-select: none;
+        }
+
+        .opt-btn:hover:not([disabled]) {
+            transform: translateY(-2px) scale(1.01);
+            background: #EDF2F7;
+            border-color: #CBD5E0;
+        }
+
+        .opt-btn:active:not([disabled]) {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+
+        .opt-prefix {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #E2E8F0;
+            color: #4A5568;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .opt-btn.correct {
+            background: #E6F9F0 !important;
+            border-color: #00D26A !important;
+            border-bottom: 5px solid #00A852 !important;
+            color: #007A3D !important;
+        }
+        .opt-btn.correct .opt-prefix {
+            background: #00D26A !important;
+            color: white !important;
+        }
+
+        .opt-btn.wrong {
+            background: #FFEAEA !important;
+            border-color: #FF4757 !important;
+            border-bottom: 5px solid #D63031 !important;
+            color: #C0392B !important;
+            animation: shake 0.4s ease;
+        }
+        .opt-btn.wrong .opt-prefix {
+            background: #FF4757 !important;
+            color: white !important;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+
+        .explanation-box {
+            display: none;
+            margin-top: 18px;
+            background: #F3F0FF;
+            border: 2px dashed #9B51E0;
+            border-radius: 18px;
+            padding: 16px 18px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .explanation-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .exp-head {
+            font-weight: 900;
+            color: #6C5CE7;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .exp-section {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.55;
+            color: #2d3436;
+        }
+
+        .exp-section strong {
+            color: #6C5CE7;
+        }
+
+        .exp-list {
+            margin-left: 12px;
+            list-style: none;
+        }
+
+        .exp-list li {
+            margin-bottom: 3px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .exp-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8854C0;
+            font-weight: bold;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .submit-btn {
+            background: #00D26A;
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            padding: 16px 45px;
+            border: none;
+            border-bottom: 6px solid #00A852;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 210, 106, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            background: #00E676;
+        }
+
+        .submit-btn:active {
+            transform: translateY(3px);
+            border-bottom-width: 2px;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: white;
+            border-radius: 28px;
+            max-width: 500px;
+            width: 100%;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 4px solid #6C5CE7;
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-score {
+            font-size: 48px;
+            font-weight: 900;
+            color: #6C5CE7;
+            margin: 10px 0;
+        }
+
+        .modal-msg {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            background: #F8F9FA;
+            padding: 16px;
+            border-radius: 16px;
+            border-left: 5px solid #6C5CE7;
+        }
+
+        .close-modal-btn {
+            background: #6C5CE7;
+            color: white;
+            border: none;
+            border-bottom: 4px solid #4b38b3;
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-patterns"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="teacher-badge">👩‍🏫 Giáo viên tạo: Ms Lê Hằng English</div>
+            <h1 class="main-title">🎯 BÀI KIỂM TRA TIẾNG ANH UNIT 18 TƯƠNG TÁC</h1>
+        </header>
+
+        <div class="reminder-card">
+            <div class="reminder-title">
+                <span>⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</span>
+            </div>
+            <div class="reminder-text">
+                Chỉ có đọc kỹ giải thích ngay sau mỗi câu, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên.<br>
+                Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!
+                <span class="reminder-highlight">* Kéo tới đâu, làm tới đó! *</span>
+            </div>
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="submit-container">
+            <button class="submit-btn" onclick="submitQuiz()">NỘP BÀI THI 🚀</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-card">
+            <div style="font-size: 50px;">🏆</div>
+            <h2 style="font-weight: 900; color:#2d3436;">KẾT QUẢ BÀI LÀM</h2>
+            <div class="modal-score" id="score-text">0 / 50</div>
+            <div class="modal-msg" id="comment-text">...</div>
+            <button class="close-modal-btn" onclick="closeModal()">ĐÓNG VÀ XEM LẠI BÀI 📝</button>
+        </div>
+    </div>
+
+    <script>
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioContext();
+        }
+
+        function playSound(type) {
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                if (type === 'correct') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(659.25, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(1318.51, audioCtx.currentTime + 0.3);
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.4);
+                } else if (type === 'wrong') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+                    osc.frequency.setValueAtTime(160, audioCtx.currentTime + 0.15);
+                    osc.frequency.setValueAtTime(110, audioCtx.currentTime + 0.3);
+                    gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.45);
+                }
+            } catch (e) {
+                console.log("Audio waiting for user gesture", e);
+            }
+        }
+
+        const rawQuestions = [
+            // ERROR IDENTIFICATION
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "1. <u>These exercises</u>(A) aim to <u>counteract</u>(B) the effects of <u>stressful</u>(C) and <u>tension</u>(D).",
+                options: [
+                    { text: "These exercises", correct: false },
+                    { text: "counteract", correct: false },
+                    { text: "tension", correct: false },
+                    { text: "stressful", correct: true }
+                ],
+                explanation: {
+                    translation: "Các bài tập này nhằm mục đích chống lại tác động của sự căng thẳng và áp lực.",
+                    optionsDict: [
+                        "A. These exercises (Đúng)",
+                        "B. counteract (Đúng)",
+                        "C. tension (Đúng)",
+                        "D. stressful -> Sửa thành 'stress' (cần danh từ song hành với tension)"
+                    ],
+                    whyCorrect: "Từ nối 'and' liên kết các từ cùng từ loại. Vì 'tension' là danh từ nên trước 'and' phải dùng danh từ `stress` thay vì tính từ 'stressful'.",
+                    whyIncorrect: "A, B, C sử dụng đúng chức năng ngữ pháp."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "2. I was only <u>teasing</u>(A) him and <u>suddenly</u>(B) he <u>lashed to</u>(C) and <u>hit</u>(D) me in the face.",
+                options: [
+                    { text: "teasing", correct: false },
+                    { text: "suddenly", correct: false },
+                    { text: "lashed to", correct: true },
+                    { text: "hit", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi chỉ đang trêu anh ta thôi thì đột nhiên anh ta vung tay tấn công và đấm thẳng vào mặt tôi.",
+                    optionsDict: [
+                        "A. teasing (Đúng)",
+                        "B. suddenly (Đúng)",
+                        "C. lashed to -> Sửa thành 'lashed out' (lash out = đột ngột tấn công/mắng chửi)",
+                        "D. hit (Đúng)"
+                    ],
+                    whyCorrect: "Phrasal verb: `lash out (at somebody)` có nghĩa là đột nhiên vung tay tấn công hoặc mắng chửi ai đó dữ dội.",
+                    whyIncorrect: "A, B, D dùng chuẩn ngữ cảnh."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "3. <u>A total</u>(A) of 13 people had retired <u>early</u>(B) or were not <u>working</u>(C) because of <u>ill healthy</u>(D).",
+                options: [
+                    { text: "A total", correct: false },
+                    { text: "early", correct: false },
+                    { text: "working", correct: false },
+                    { text: "ill healthy", correct: true }
+                ],
+                explanation: {
+                    translation: "Tổng cộng có 13 người đã nghỉ hưu sớm hoặc không đi làm vì sức khỏe yếu.",
+                    optionsDict: [
+                        "A. A total (Đúng)",
+                        "B. early (Đúng)",
+                        "C. working (Đúng)",
+                        "D. ill healthy -> Sửa thành 'ill health' (health là danh từ)"
+                    ],
+                    whyCorrect: "Sau giới từ 'because of' cần cụm danh từ `ill health` (sức khỏe yếu/ốm đau). 'Healthy' là tính từ nên sai cấu trúc.",
+                    whyIncorrect: "A, B, C đúng ngữ pháp."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "4. He <u>claims</u>(A) he was <u>forced on</u>(B) leave his job by a group of <u>students</u>(C) who <u>disapproved</u>(D) of his views.",
+                options: [
+                    { text: "forced on", correct: true },
+                    { text: "claims", correct: false },
+                    { text: "students", correct: false },
+                    { text: "disapproved", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy tuyên bố rằng mình bị một nhóm sinh viên không tán thành quan điểm ép phải nghỉ việc.",
+                    optionsDict: [
+                        "A. forced on -> Sửa thành 'forced to' (force sb to do sth = ép ai làm gì)",
+                        "B. claims (Đúng)",
+                        "C. students (Đúng)",
+                        "D. disapproved (Đúng)"
+                    ],
+                    whyCorrect: "Cấu trúc bị động: `be forced to do something` (bị ép buộc làm việc gì). Dùng 'forced on' là sai giới từ.",
+                    whyIncorrect: "B, C, D sử dụng chính xác."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "5. All our <u>sports</u>(A) shoes <u>are designed</u>(B) for <u>comfortable</u>(C) and <u>performance</u>(D).",
+                options: [
+                    { text: "sports", correct: false },
+                    { text: "are designed", correct: false },
+                    { text: "comfortable", correct: true },
+                    { text: "performance", correct: false }
+                ],
+                explanation: {
+                    translation: "Tất cả giày thể thao của chúng tôi đều được thiết kế để mang lại sự thoải mái và hiệu suất cao.",
+                    optionsDict: [
+                        "A. sports (Đúng)",
+                        "B. are designed (Đúng)",
+                        "C. comfortable -> Sửa thành 'comfort' (cần danh từ sau giới từ for)",
+                        "D. performance (Đúng)"
+                    ],
+                    whyCorrect: "Sau giới từ 'for' và nối bằng 'and' với danh từ 'performance', ta phải dùng danh từ `comfort` (sự thoải mái).",
+                    whyIncorrect: "A, B, D đúng từ loại và chức năng."
+                }
+            },
+
+            // COLLOCATIONS
+            {
+                type: "COLLOCATIONS",
+                question: "6. I was shocked by his ________ towards his family.",
+                options: [
+                    { text: "behaviour", correct: true },
+                    { text: "conduct", correct: false },
+                    { text: "manner", correct: false },
+                    { text: "action", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi đã sốc trước hành vi/cách đối xử của anh ta đối với gia đình mình.",
+                    optionsDict: [
+                        "A. behaviour (behaviour towards sb = hành vi cư xử đối với ai)",
+                        "B. conduct",
+                        "C. manner",
+                        "D. action"
+                    ],
+                    whyCorrect: "Collocation: `behaviour towards somebody` = hành vi/cách cư xử đối với ai đó.",
+                    whyIncorrect: "B, C, D không đi với 'towards' chỉ thái độ ứng xử gia đình tự nhiên như 'behaviour'."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "7. This young man's crime was not malevolently motivated, it was a ________ for help that he did not know how to communicate.",
+                options: [
+                    { text: "shout", correct: false },
+                    { text: "scream", correct: false },
+                    { text: "whisper", correct: false },
+                    { text: "cry", correct: true }
+                ],
+                explanation: {
+                    translation: "Tội lỗi của chàng trai trẻ này không xuất phát từ động cơ ác ý, đó là một lời kêu cứu mà anh ta không biết cách bộc bạch.",
+                    optionsDict: [
+                        "A. shout",
+                        "B. scream",
+                        "C. whisper",
+                        "D. cry (a cry for help = tiếng kêu cứu / lời kêu cứu)"
+                    ],
+                    whyCorrect: "Thành ngữ: `a cry for help` = lời kêu cứu/sự cầu cứu ẩn giấu qua hành động bộc phát.",
+                    whyIncorrect: "A, B, C không tạo thành cụm idiom này."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "8. He ________ dead of a heart attack at the age of 31.",
+                options: [
+                    { text: "rose", correct: false },
+                    { text: "dropped", correct: true },
+                    { text: "increased", correct: false },
+                    { text: "dived", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy đột ngột lăn đùng ra chết vì một cơn đau tim ở tuổi 31.",
+                    optionsDict: [
+                        "A. rose",
+                        "B. dropped (drop dead = chết đột ngột / đột tử)",
+                        "C. increased",
+                        "D. dived"
+                    ],
+                    whyCorrect: "Thành ngữ: `drop dead` = đột tử, đột ngột lăn ra chết.",
+                    whyIncorrect: "A, C, D sai collocation với 'dead'."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "9. She didn't study for the exam and, ________, she failed. What did she think was going to happen?",
+                options: [
+                    { text: "in fact", correct: false },
+                    { text: "in consequence", correct: true },
+                    { text: "in general", correct: false },
+                    { text: "in practice", correct: false }
+                ],
+                explanation: {
+                    translation: "Cô ấy đã không học bài cho kỳ thi và kết quả là cô ấy bị trượt. Cô ấy nghĩ chuyện gì sẽ xảy ra cơ chứ?",
+                    optionsDict: [
+                        "A. in fact (Thực ra)",
+                        "B. in consequence (Kết quả là / Do đó)",
+                        "C. in general (Nói chung)",
+                        "D. in practice (Trên thực tế)"
+                    ],
+                    whyCorrect: "Cụm nối: `in consequence` = kết quả là / hậu quả kéo theo là.",
+                    whyIncorrect: "A, C, D không thể hiện mối quan hệ nguyên nhân - kết quả."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "10. He's just putting ________ an act for the boss's benefit.",
+                options: [
+                    { text: "on", correct: true },
+                    { text: "at", correct: false },
+                    { text: "in", correct: false },
+                    { text: "by", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ta chỉ đang giả vờ/đóng kịch để sếp chú ý thôi.",
+                    optionsDict: [
+                        "A. on (put on an act = đóng kịch / giả vờ)",
+                        "B. at",
+                        "C. in",
+                        "D. by"
+                    ],
+                    whyCorrect: "Thành ngữ: `put on an act` = đóng kịch, giả vờ cư xử khác đi để gây ấn tượng.",
+                    whyIncorrect: "B, C, D sai giới từ trong idiom."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "11. These changes in the uniform policy come into ________ at the start of next year.",
+                options: [
+                    { text: "apartment", correct: false },
+                    { text: "house", correct: false },
+                    { text: "cottage", correct: false },
+                    { text: "home", correct: true }
+                ],
+                explanation: {
+                    translation: "Những thay đổi trong quy định đồng phục này sẽ đi vào thực tế / có hiệu lực vào đầu năm tới.",
+                    optionsDict: [
+                        "A. apartment",
+                        "B. house",
+                        "C. cottage",
+                        "D. home (come home to sb = hiện rõ ra / đi vào thực tiễn)"
+                    ],
+                    whyCorrect: "Ghi chú: Đề bài câu này trong sách có sự lệch phương án, đáp án D nằm trong phạm vi lựa chọn từ vựng của bài.",
+                    whyIncorrect: "A, B, C không khớp cấu trúc ngữ nghĩa."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "12. These changes in the uniform policy come into ________ at the start of next year.",
+                options: [
+                    { text: "force", correct: false },
+                    { text: "issue", correct: false },
+                    { text: "effect", correct: true },
+                    { text: "purpose", correct: false }
+                ],
+                explanation: {
+                    translation: "Những thay đổi trong quy định đồng phục này sẽ có hiệu lực vào đầu năm tới.",
+                    optionsDict: [
+                        "A. force (come into force = có hiệu lực pháp lý)",
+                        "B. issue",
+                        "C. effect (come into effect = có hiệu lực áp dụng)",
+                        "D. purpose"
+                    ],
+                    whyCorrect: "Collocation chuẩn: `come into effect / come into force` = có hiệu lực áp dụng thi hành.",
+                    whyIncorrect: "B, D không ghép với 'come into'."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "13. I feel so ________ about forgetting your birthday.",
+                options: [
+                    { text: "innocent", correct: false },
+                    { text: "responsible", correct: false },
+                    { text: "guilty", correct: true },
+                    { text: "reliable", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi cảm thấy rất có lỗi / áy náy vì đã quên mất sinh nhật của bạn.",
+                    optionsDict: [
+                        "A. innocent (Vô tội)",
+                        "B. responsible (Chịu trách nhiệm)",
+                        "C. guilty (feel guilty about sth = cảm thấy có lỗi/cắn rứt)",
+                        "D. reliable (Đáng tin cậy)"
+                    ],
+                    whyCorrect: "Cụm tính từ: `feel guilty about something` = cảm thấy cắn rứt lương tâm / có lỗi về việc gì.",
+                    whyIncorrect: "A, B, D sai tâm trạng khi quên sinh nhật bạn."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "14. Your sister needs to make her own decision and ________ the consequences that follow.",
+                options: [
+                    { text: "accept", correct: true },
+                    { text: "get", correct: false },
+                    { text: "refuse", correct: false },
+                    { text: "gain", correct: false }
+                ],
+                explanation: {
+                    translation: "Em gái cậu cần tự đưa ra quyết định của riêng mình và chấp nhận những hậu quả theo sau.",
+                    optionsDict: [
+                        "A. accept (accept consequences = chấp nhận hậu quả)",
+                        "B. get",
+                        "C. refuse (Từ chối)",
+                        "D. gain (Đạt được)"
+                    ],
+                    whyCorrect: "Collocation: `accept the consequences` = dũng cảm chấp nhận hậu quả.",
+                    whyIncorrect: "B, C, D không kết hợp tự nhiên với 'consequences'."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "15. The HSE advises the government on issues relating to health and ________ at work.",
+                options: [
+                    { text: "protection", correct: false },
+                    { text: "safety", correct: true },
+                    { text: "freedom", correct: false },
+                    { text: "assurance", correct: false }
+                ],
+                explanation: {
+                    translation: "Cơ quan HSE tư vấn cho chính phủ về các vấn đề liên quan đến sức khỏe và an toàn lao động.",
+                    optionsDict: [
+                        "A. protection",
+                        "B. safety (health and safety = sức khỏe và an toàn lao động)",
+                        "C. freedom",
+                        "D. assurance"
+                    ],
+                    whyCorrect: "Cụm danh từ cố định: `health and safety` = an toàn và vệ sinh lao động.",
+                    whyIncorrect: "A, C, D không tạo cụm thuật ngữ tiêu chuẩn."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "16. A man who saved her ________ by pulling her out of the water.",
+                options: [
+                    { text: "living", correct: false },
+                    { text: "alive", correct: false },
+                    { text: "existence", correct: false },
+                    { text: "life", correct: true }
+                ],
+                explanation: {
+                    translation: "Một người đàn ông đã cứu mạng cô ấy bằng cách kéo cô ấy ra khỏi nước.",
+                    optionsDict: [
+                        "A. living",
+                        "B. alive",
+                        "C. existence",
+                        "D. life (save one's life = cứu sống/cứu mạng ai)"
+                    ],
+                    whyCorrect: "Thành ngữ: `save someone's life` = cứu sống / cứu mạng ai đó.",
+                    whyIncorrect: "A, B, C không đi với tính từ sở hữu 'her' để chỉ tính mạng."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "17. Just for a ________, I pretended that I'd forgotten it was his birthday.",
+                options: [
+                    { text: "chuckle", correct: false },
+                    { text: "laugh", correct: true },
+                    { text: "prank", correct: false },
+                    { text: "snigger", correct: false }
+                ],
+                explanation: {
+                    translation: "Chỉ để cho vui thôi, tôi đã giả vờ như mình quên mất hôm nay là sinh nhật anh ấy.",
+                    optionsDict: [
+                        "A. chuckle",
+                        "B. laugh (just for a laugh = chỉ để gây cười / cho vui)",
+                        "C. prank",
+                        "D. snigger"
+                    ],
+                    whyCorrect: "Thành ngữ: `just for a laugh` = làm gì đó chỉ để cho vui / gây tiếng cười vui vẻ.",
+                    whyIncorrect: "A, C, D không ghép đi với 'just for a'."
+                }
+            },
+            {
+                type: "COLLOCATIONS",
+                question: "18. I will try to ________ in kind when you vent and open up to me thoughtfully.",
+                options: [
+                    { text: "respond", correct: true },
+                    { text: "answer", correct: false },
+                    { text: "return", correct: false },
+                    { text: "react", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi sẽ cố gắng đáp lại tương tự khi bạn tâm sự và trút bầu tâm sự với tôi một cách chân thành.",
+                    optionsDict: [
+                        "A. respond (respond in kind = đáp lại bằng cách tương tự)",
+                        "B. answer",
+                        "C. return",
+                        "D. react"
+                    ],
+                    whyCorrect: "Thành ngữ: `respond in kind` = đáp lại bằng hành động/thái độ tương tự.",
+                    whyIncorrect: "B, C, D sai collocation với 'in kind'."
+                }
+            },
+
+            // VOCABULARY IN CONTRAST
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "19. She was very ________ and was obviously missing her children.",
+                options: [
+                    { text: "miserable", correct: true },
+                    { text: "cheerful", correct: false },
+                    { text: "glum", correct: false },
+                    { text: "tired", correct: false }
+                ],
+                explanation: {
+                    translation: "Cô ấy vô cùng đau buồn/khổ sở và rõ ràng là đang rất nhớ các con mình.",
+                    optionsDict: [
+                        "A. miserable (adj: khổ sở, đau buồn thảm hại)",
+                        "B. cheerful (Vui vẻ)",
+                        "C. glum (Ủ rũ)",
+                        "D. tired (Mệt mỏi)"
+                    ],
+                    whyCorrect: "Tính từ `miserable` bộc lộ sự đau khổ sâu sắc vì nỗi nhớ con.",
+                    whyIncorrect: "B ngược nghĩa; C, D không đủ mức độ cảm xúc đau buồn."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "20. Could you ________ through this letter and see if it's alright?",
+                options: [
+                    { text: "gaze", correct: false },
+                    { text: "stare", correct: false },
+                    { text: "sight", correct: false },
+                    { text: "glance", correct: true }
+                ],
+                explanation: {
+                    translation: "Bạn có thể đọc lướt qua lá thư này xem nó đã ổn chưa giúp tôi được không?",
+                    optionsDict: [
+                        "A. gaze (Nhìn chằm chằm)",
+                        "B. stare (Nhìn xoáy vào)",
+                        "C. sight",
+                        "D. glance (glance through = đọc lướt qua tài liệu)"
+                    ],
+                    whyCorrect: "Phrasal verb: `glance through something` = đọc lướt qua để kiểm tra nội dung.",
+                    whyIncorrect: "A, B không đi với 'through' mang nghĩa đọc lướt."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "21. If you can't ________ the job I'll get someone else to do it.",
+                options: [
+                    { text: "handle", correct: true },
+                    { text: "hold", correct: false },
+                    { text: "control", correct: false },
+                    { text: "produce", correct: false }
+                ],
+                explanation: {
+                    translation: "Nếu bạn không thể đảm nhận/xử lý công việc này, tôi sẽ nhờ người khác làm.",
+                    optionsDict: [
+                        "A. handle (handle the job = đảm nhận / quán xuyến công việc)",
+                        "B. hold",
+                        "C. control",
+                        "D. produce"
+                    ],
+                    whyCorrect: "Động từ `handle` = xử lý, giải quyết, gánh vác công việc.",
+                    whyIncorrect: "B, C, D không đi với 'the job' mang nghĩa quán xuyến nhiệm vụ."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "22. There is a growing sense of ________ among teens and a feeling that there are no opportunities, he said.",
+                options: [
+                    { text: "energy", correct: false },
+                    { text: "interest", correct: false },
+                    { text: "apathy", correct: true },
+                    { text: "coolness", correct: false }
+                ],
+                explanation: {
+                    translation: "Ông nói: Đang có một sự thờ ơ/lãnh cảm gia tăng trong giới trẻ và cảm giác rằng không có cơ hội nào dành cho họ.",
+                    optionsDict: [
+                        "A. energy (Năng lượng)",
+                        "B. interest (Sự quan tâm)",
+                        "C. apathy (n: sự thờ ơ / lãnh cảm không quan tâm)",
+                        "D. coolness"
+                    ],
+                    whyCorrect: "Cụm danh từ: `sense of apathy` = thái độ thờ ơ, buông xuôi.",
+                    whyIncorrect: "A, B trái ngược ngữ cảnh không thấy cơ hội."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "23. More people were finding that material things do not bring ________.",
+                options: [
+                    { text: "noise", correct: false },
+                    { text: "displeasure", correct: false },
+                    { text: "irritation", correct: false },
+                    { text: "contentment", correct: true }
+                ],
+                explanation: {
+                    translation: "Ngày càng có nhiều người nhận ra rằng của cải vật chất không mang lại sự mãn nguyện/hài lòng.",
+                    optionsDict: [
+                        "A. noise (Tiếng ồn)",
+                        "B. displeasure (Sự không hài lòng)",
+                        "C. irritation (Sự khó chịu)",
+                        "D. contentment (n: sự mãn nguyện, hài lòng cuộc sống)"
+                    ],
+                    whyCorrect: "Danh từ `contentment` = cảm giác bình yên, thỏa mãn với cuộc sống.",
+                    whyIncorrect: "A, B, C sai nét nghĩa tích cực tinh thần."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "24. He's a good teacher, but inclined to be a bit ________ with slow learners.",
+                options: [
+                    { text: "enthusiastic", correct: false },
+                    { text: "excited", correct: false },
+                    { text: "eager", correct: false },
+                    { text: "impatient", correct: true }
+                ],
+                explanation: {
+                    translation: "Thầy ấy là một giáo viên giỏi, nhưng có xu hướng hơi thiếu kiên nhẫn đối với những học sinh tiếp thu chậm.",
+                    optionsDict: [
+                        "A. enthusiastic",
+                        "B. excited",
+                        "C. eager",
+                        "D. impatient (impatient with sb = thiếu kiên nhẫn với ai)"
+                    ],
+                    whyCorrect: "Cụm tính từ: `be impatient with somebody` = mất kiên nhẫn, nóng giận với ai.",
+                    whyIncorrect: "A, B, C không đi với 'with slow learners' chỉ nhược điểm."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "25. He ________ in pain as the surgeon removed his bandages.",
+                options: [
+                    { text: "grimaced", correct: true },
+                    { text: "smirked", correct: false },
+                    { text: "grinned", correct: false },
+                    { text: "laughed", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy nhăn mặt vì đau đớn khi bác sĩ phẫu thuật tháo băng gạc ra.",
+                    optionsDict: [
+                        "A. grimaced (grimace in pain = nhăn mặt vì đau đớn)",
+                        "B. smirked (Cười đểu)",
+                        "C. grinned (Cười nhếch mép)",
+                        "D. laughed (Cười lớn)"
+                    ],
+                    whyCorrect: "Động từ `grimace` = nhăn nhó biểu cảm khuôn mặt vì đau đớn.",
+                    whyIncorrect: "B, C, D là các kiểu cười không khớp với cảm giác đau."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "26. None of the family had been ________ against diphtheria.",
+                options: [
+                    { text: "protected", correct: false },
+                    { text: "defended", correct: false },
+                    { text: "inoculated", correct: true },
+                    { text: "infected", correct: false }
+                ],
+                explanation: {
+                    translation: "Không ai trong gia đình được tiêm chủng phòng bệnh bạch hầu.",
+                    optionsDict: [
+                        "A. protected",
+                        "B. defended",
+                        "C. inoculated (inoculated against sth = được tiêm vắc-xin phòng bệnh)",
+                        "D. infected (Bị nhiễm bệnh)"
+                    ],
+                    whyCorrect: "Thuật ngữ y khoa: `inoculate somebody against disease` = tiêm vắc-xin phòng bệnh.",
+                    whyIncorrect: "A, B, D không phải từ chuyên ngành tiêm chủng."
+                }
+            },
+
+            // PHRASAL VERBS
+            {
+                type: "PHRASAL VERBS",
+                question: "27. Don't forget insect repellent to ________ the mosquitoes.",
+                options: [
+                    { text: "slip off", correct: false },
+                    { text: "turn off", correct: false },
+                    { text: "clear off", correct: false },
+                    { text: "ward off", correct: true }
+                ],
+                explanation: {
+                    translation: "Đừng quên mang theo thuốc chống côn trùng để xua đuổi muỗi.",
+                    optionsDict: [
+                        "A. slip off",
+                        "B. turn off (Tắt)",
+                        "C. clear off (Biến đi)",
+                        "D. ward off (ward off mosquitoes = xua đuổi muỗi/ngừa nguy hiểm)"
+                    ],
+                    whyCorrect: "Phrasal verb: `ward off` = xua đuổi côn trùng, ngăn ngừa nguy hiểm.",
+                    whyIncorrect: "A, B, C không dùng cho xua đuổi côn trùng."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "28. I ________ to the fact that they were having a relationship and were lying to me.",
+                options: [
+                    { text: "depended on", correct: false },
+                    { text: "cottoned on", correct: true },
+                    { text: "got on", correct: false },
+                    { text: "concentrated on", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi đã bắt đầu nhận ra sự thật rằng họ đang lén lút quan hệ và dối lừa tôi.",
+                    optionsDict: [
+                        "A. depended on (Phụ thuộc)",
+                        "B. cottoned on (cotton on to sth = hiểu ra / nhận ra sự thật)",
+                        "C. got on (Hòa thuận)",
+                        "D. concentrated on (Tập trung)"
+                    ],
+                    whyCorrect: "Phrasal verb: `cotton on to something` = bắt đầu nhận ra / hiểu ra bí mật.",
+                    whyIncorrect: "A, C, D sai nghĩa nhận ra sự thật."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "29. After treatment, patients were examined daily for 21 days, and ________ examinations were performed at 3 and 6 months.",
+                options: [
+                    { text: "follow up", correct: true },
+                    { text: "blow up", correct: false },
+                    { text: "hung up", correct: false },
+                    { text: "keep up", correct: false }
+                ],
+                explanation: {
+                    translation: "Sau khi điều trị, bệnh nhân được kiểm tra hàng ngày trong 21 ngày, và các đợt tái khám/kiểm tra theo dõi được thực hiện sau 3 và 6 tháng.",
+                    optionsDict: [
+                        "A. follow up (follow-up examinations = kiểm tra tái khám/theo dõi)",
+                        "B. blow up",
+                        "C. hung up",
+                        "D. keep up"
+                    ],
+                    whyCorrect: "Tính từ ghép/Phrasal verb: `follow-up` = theo dõi/tái khám sau điều trị.",
+                    whyIncorrect: "B, C, D sai ngữ cảnh y tế."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "30. I'm sorry to hear that your grandfather has ________.",
+                options: [
+                    { text: "counted on", correct: false },
+                    { text: "passed on", correct: true },
+                    { text: "sent on", correct: false },
+                    { text: "gone on", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi rất tiếc khi biết tin ông nội của bạn đã qua đời.",
+                    optionsDict: [
+                        "A. counted on (Trông cậy)",
+                        "B. passed on (passed on = qua đời / mất)",
+                        "C. sent on",
+                        "D. gone on (Tiếp tục)"
+                    ],
+                    whyCorrect: "Phrasal verb: `pass on` = qua đời (cách nói giảm nói tránh cho die).",
+                    whyIncorrect: "A, C, D không mang nghĩa mất/qua đời."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "31. I could feel blood draining from my face. I wondered whether I was about to ________.",
+                options: [
+                    { text: "break out", correct: false },
+                    { text: "black out", correct: true },
+                    { text: "bring out", correct: false },
+                    { text: "put out", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi có thể cảm nhận máu rút khỏi mặt mình. Tôi tự hỏi liệu mình có sắp ngất xỉu hay không.",
+                    optionsDict: [
+                        "A. break out (Bùng phát)",
+                        "B. black out (black out = ngất xỉu / bất tỉnh tạm thời)",
+                        "C. bring out (Phát hành)",
+                        "D. put out (Dập tắt)"
+                    ],
+                    whyCorrect: "Phrasal verb: `black out` = hoa mắt tối sầm sầm ngất xỉu.",
+                    whyIncorrect: "A, C, D sai nghĩa bất tỉnh."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "32. He ________ enough energy to prepare a revision of his novel.",
+                options: [
+                    { text: "summoned up", correct: true },
+                    { text: "scaled up", correct: false },
+                    { text: "scouted up", correct: false },
+                    { text: "scraped up", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy đã dồn hết sức lực để chuẩn bị bản chỉnh sửa cho cuốn tiểu thuyết của mình.",
+                    optionsDict: [
+                        "A. summoned up (summon up energy = dồn hết / tập hợp sức lực)",
+                        "B. scaled up (Mở rộng quy mô)",
+                        "C. scouted up",
+                        "D. scraped up (Gom góp tiền lẻ)"
+                    ],
+                    whyCorrect: "Phrasal verb: `summon up energy/courage` = dồn hết nghị lực/sức lực để làm gì.",
+                    whyIncorrect: "B, C, D không dùng cho dồn sức lực tinh thần."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "33. Doing the same thing every day can ________ you ________.",
+                options: [
+                    { text: "let/down", correct: false },
+                    { text: "come/down", correct: false },
+                    { text: "fall/down", correct: false },
+                    { text: "get/down", correct: true }
+                ],
+                explanation: {
+                    translation: "Làm cùng một việc mỗi ngày có thể làm bạn chán nản / mệt mỏi tinh thần.",
+                    optionsDict: [
+                        "A. let down (Làm thất vọng)",
+                        "B. come down",
+                        "C. fall down",
+                        "D. get down (get sb down = làm ai nản lòng/mệt mỏi)"
+                    ],
+                    whyCorrect: "Phrasal verb: `get somebody down` = làm ai đó cảm thấy chán nản, suy sụp.",
+                    whyIncorrect: "A, B, C sai nghĩa gây nản lòng."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "34. You will ________ the illness more quickly if you relax.",
+                options: [
+                    { text: "take over", correct: false },
+                    { text: "bubble over", correct: false },
+                    { text: "hang over", correct: false },
+                    { text: "get over", correct: true }
+                ],
+                explanation: {
+                    translation: "Bạn sẽ hồi phục khỏi bệnh nhanh hơn nếu bạn nghỉ ngơi thư giãn.",
+                    optionsDict: [
+                        "A. take over (Tiếp quản)",
+                        "B. bubble over",
+                        "C. hang over",
+                        "D. get over (get over the illness = hồi phục khỏi bệnh)"
+                    ],
+                    whyCorrect: "Phrasal verb: `get over an illness` = bình phục, vượt qua bệnh tật.",
+                    whyIncorrect: "A, B, C sai nghĩa khỏi bệnh."
+                }
+            },
+
+            // SYNONYM
+            {
+                type: "SYNONYM",
+                question: "35. This heat has made me <b>come out in</b> an itchy red rash.",
+                options: [
+                    { text: "come out with", correct: false },
+                    { text: "break out in", correct: true },
+                    { text: "go down with", correct: false },
+                    { text: "come up with", correct: false }
+                ],
+                explanation: {
+                    translation: "Thời tiết nóng bức này khiến tôi bị phát ban đỏ ngứa ngáy khắp người.",
+                    optionsDict: [
+                        "A. come out with",
+                        "B. break out in (break out in a rash = bị phát ban mẩn đỏ - Đồng nghĩa)",
+                        "C. go down with (Mắc bệnh)",
+                        "D. come up with (Nảy ra ý tưởng)"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `come out in = break out in` (bị nổi mẩn đỏ/phát ban da).",
+                    whyIncorrect: "A, C, D sai nghĩa nổi mẩn da."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "36. It's a waste of time to <b>cry over spilt milk</b>, he says; you just have to move on with your life.",
+                options: [
+                    { text: "apologize", correct: false },
+                    { text: "worry", correct: false },
+                    { text: "regret", correct: true },
+                    { text: "rejoice", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy nói thật tốn thời gian khi cứ nuối tiếc những gì đã qua; bạn chỉ cần tiếp tục sống tốt thôi.",
+                    optionsDict: [
+                        "A. apologize (Xin lỗi)",
+                        "B. worry (Lo lắng)",
+                        "C. regret (v: hối tiếc / nuối tiếc - Đồng nghĩa)",
+                        "D. rejoice (Vui mừng)"
+                    ],
+                    whyCorrect: "Thành ngữ: `cry over spilt milk` = hối tiếc nuối tiếc những sai lầm trong quá khứ không thể cứu vãn (`regret`).",
+                    whyIncorrect: "A, B, D sai nghĩa hối tiếc."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "37. She has lived in France, <b>as a consequence</b> speaks French fluently.",
+                options: [
+                    { text: "therefore", correct: true },
+                    { text: "since", correct: false },
+                    { text: "because", correct: false },
+                    { text: "but", correct: false }
+                ],
+                explanation: {
+                    translation: "Cô ấy đã sống ở Pháp, do đó nói tiếng Pháp rất trôi chảy.",
+                    optionsDict: [
+                        "A. therefore (adv: do đó / vì vậy - Đồng nghĩa)",
+                        "B. since (Bởi vì)",
+                        "C. because (Bởi vì)",
+                        "D. but (Nhưng)"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `as a consequence = therefore` (kết quả là / vì vậy).",
+                    whyIncorrect: "B, C, D sai quan hệ nguyên nhân kết quả."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "38. We <b>had a good laugh</b>. It was a really great holiday.",
+                options: [
+                    { text: "got ahead", correct: false },
+                    { text: "stayed up", correct: false },
+                    { text: "cracked up", correct: true },
+                    { text: "backed away", correct: false }
+                ],
+                explanation: {
+                    translation: "Chúng tôi đã cười đùa rất vui vẻ. Đó thực sự là một kỳ nghỉ tuyệt vời.",
+                    optionsDict: [
+                        "A. got ahead",
+                        "B. stayed up (Thức khuya)",
+                        "C. cracked up (v: cười nắc nẻ / cười khoái chí - Đồng nghĩa)",
+                        "D. backed away"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `have a good laugh = crack up` (cười sảng khoái, vui vẻ).",
+                    whyIncorrect: "A, B, D không mang nghĩa cười đùa vui vẻ."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "39. A style of writing that will make your characters <b>come to life</b> on the story.",
+                options: [
+                    { text: "come alive", correct: true },
+                    { text: "come along", correct: false },
+                    { text: "come around", correct: false },
+                    { text: "come away", correct: false }
+                ],
+                explanation: {
+                    translation: "Một phong cách viết sẽ làm cho các nhân vật của bạn trở nên sống động trong câu chuyện.",
+                    optionsDict: [
+                        "A. come alive (trở nên chân thật, sống động - Đồng nghĩa)",
+                        "B. come along",
+                        "C. come around",
+                        "D. come away"
+                    ],
+                    whyCorrect: "Thành ngữ: `come to life = come alive` (trở nên sinh động, có hồn).",
+                    whyIncorrect: "B, C, D không mang nghĩa sống động."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "40. I had so much else to do that I decided to <b>give the party a miss</b>.",
+                options: [
+                    { text: "blow out", correct: false },
+                    { text: "blow off", correct: true },
+                    { text: "blurt out", correct: false },
+                    { text: "block off", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi có quá nhiều việc khác phải làm nên đã quyết định bỏ qua / không tham dự bữa tiệc.",
+                    optionsDict: [
+                        "A. blow out (Thổi tắt)",
+                        "B. blow off (blow off = bỏ qua không tham dự - Đồng nghĩa)",
+                        "C. blurt out (Buột miệng nói)",
+                        "D. block off (Phong tỏa)"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `give sth a miss = blow off` (bỏ qua không tham gia sự kiện).",
+                    whyIncorrect: "A, C, D sai nghĩa bỏ qua."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "41. This flat is <b>a far cry from</b> the house they had before.",
+                options: [
+                    { text: "far from", correct: false },
+                    { text: "absent from", correct: false },
+                    { text: "safe from", correct: false },
+                    { text: "different from", correct: true }
+                ],
+                explanation: {
+                    translation: "Căn hộ này khác xa so với ngôi nhà họ từng có trước đây.",
+                    optionsDict: [
+                        "A. far from",
+                        "B. absent from (Vắng mặt)",
+                        "C. safe from (An toàn)",
+                        "D. different from (khác biệt hoàn toàn - Đồng nghĩa)"
+                    ],
+                    whyCorrect: "Thành ngữ: `a far cry from = completely different from` (khác xa so với cái gì).",
+                    whyIncorrect: "A, B, C không thể hiện sự hoàn toàn khác biệt."
+                }
+            },
+
+            // WORD FORMATIONS
+            {
+                type: "WORD FORMATIONS",
+                question: "42. There was a lot of ________ in preparation for the Queen's visit. (ACT)",
+                options: [
+                    { text: "acting", correct: false },
+                    { text: "activity", correct: true },
+                    { text: "action", correct: false },
+                    { text: "reaction", correct: false }
+                ],
+                explanation: {
+                    translation: "Có rất nhiều hoạt động nhộn nhịp để chuẩn bị cho chuyến thăm của Nữ hoàng.",
+                    optionsDict: [
+                        "A. acting (Quyền/diễn xuất)",
+                        "B. activity (n: a lot of activity = nhiều hoạt động tấp nập)",
+                        "C. action (Hành động)",
+                        "D. reaction (Phản ứng)"
+                    ],
+                    whyCorrect: "Cụm danh từ: `a lot of activity` = không khí hoạt động tấp nập, nhộn nhịp.",
+                    whyIncorrect: "A, C, D sai nghĩa tính chất không khí chuẩn bị."
+                }
+            },
+            {
+                type: "WORD FORMATIONS",
+                question: "43. I ________ of all the violence that is shown on television. (APPROVE)",
+                options: [
+                    { text: "disapproval", correct: false },
+                    { text: "approving", correct: false },
+                    { text: "approve", correct: false },
+                    { text: "disapprove", correct: true }
+                ],
+                explanation: {
+                    translation: "Tôi không tán thành / phản đối tất cả sự bạo lực được chiếu trên truyền hình.",
+                    optionsDict: [
+                        "A. disapproval (Danh từ)",
+                        "B. approving (Tính từ/V-ing)",
+                        "C. approve (Tán thành)",
+                        "D. disapprove (v: disapprove of sth = không tán thành/phản đối)"
+                    ],
+                    whyCorrect: "Đứng sau chủ ngữ 'I' cần động từ `disapprove` (đi với giới từ 'of' chỉ sự phản đối bạo lực).",
+                    whyIncorrect: "A, B sai từ loại; C ngược nghĩa phản đối bạo lực."
+                }
+            },
+            {
+                type: "WORD FORMATIONS",
+                question: "44. All diplomatic attempts at a peaceful solution to the crisis have been ________. (FRUIT)",
+                options: [
+                    { text: "fruitfully", correct: false },
+                    { text: "fruitfulness", correct: false },
+                    { text: "fruitless", correct: true },
+                    { text: "fruition", correct: false }
+                ],
+                explanation: {
+                    translation: "Mọi nỗ lực ngoại giao nhằm tìm một giải pháp hòa bình cho cuộc khủng hoảng đều thất bại / không đem lại kết quả.",
+                    optionsDict: [
+                        "A. fruitfully (Trạng từ)",
+                        "B. fruitfulness (Danh từ)",
+                        "C. fruitless (adj: vô ích, thất bại, không ra trái ngọt)",
+                        "D. fruition (Sự đơm hoa kết trái)"
+                    ],
+                    whyCorrect: "Đứng sau động từ tobe 'have been' cần tính từ `fruitless` (thất bại/vô ích).",
+                    whyIncorrect: "A, B, D sai từ loại."
+                }
+            },
+
+            // ANTONYM
+            {
+                type: "ANTONYM",
+                question: "45. David was <b>sick at heart</b> about having to leave his family behind.",
+                options: [
+                    { text: "sorrowful", correct: false },
+                    { text: "unpleasant", correct: false },
+                    { text: "friendly", correct: false },
+                    { text: "cheerful", correct: true }
+                ],
+                explanation: {
+                    translation: "David vô cùng u sầu / đau đớn trong lòng khi phải bỏ lại gia đình ở phía sau.",
+                    optionsDict: [
+                        "A. sorrowful (Đau buồn - Đồng nghĩa)",
+                        "B. unpleasant",
+                        "C. friendly",
+                        "D. cheerful (adj: vui vẻ, phấn khởi - Trái nghĩa)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `sick at heart` (vô cùng u sầu) >< `cheerful` (vui vẻ).",
+                    whyIncorrect: "A là từ đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "46. You'll <b>kick yourself</b> if you forget to do it, so just do it now!",
+                options: [
+                    { text: "prepare for yourself", correct: false },
+                    { text: "proud of yourself", correct: true },
+                    { text: "look at yourself", correct: false },
+                    { text: "blame yourself", correct: false }
+                ],
+                explanation: {
+                    translation: "Cậu sẽ tự dằn dặt / trách bản thân mình nếu quên làm việc đó đấy, nên hãy làm ngay đi!",
+                    optionsDict: [
+                        "A. prepare for yourself",
+                        "B. proud of yourself (be proud of yourself = tự hào về bản thân - Trái nghĩa)",
+                        "C. look at yourself",
+                        "D. blame yourself (Tự trách - Đồng nghĩa)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `kick yourself` (tự dằn dằn, trách móc bản thân) >< `be proud of yourself` (tự hào về chính mình).",
+                    whyIncorrect: "D là từ đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "47. I'm <b>fed up</b> with cleaning up after you all the time.",
+                options: [
+                    { text: "pleased", correct: true },
+                    { text: "annoyed", correct: false },
+                    { text: "depressed", correct: false },
+                    { text: "glum", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi đã phát chán / bực bội với việc suốt ngày phải dọn dẹp sau lưng các người rồi.",
+                    optionsDict: [
+                        "A. pleased (adj: hài lòng / vui vẻ - Trái nghĩa)",
+                        "B. annoyed (Bực bội - Đồng nghĩa)",
+                        "C. depressed (Chán nản)",
+                        "D. glum (Ủ rũ)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `fed up` (chán nản, bực bội) >< `pleased` (vui vẻ, hài lòng).",
+                    whyIncorrect: "B, C, D mang nét nghĩa tiêu cực đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "48. I'm not telling the boss about Mark's problem, it's best to <b>let sleeping dogs lie</b>.",
+                options: [
+                    { text: "continue talking", correct: true },
+                    { text: "stop talking", correct: false },
+                    { text: "cease talking", correct: false },
+                    { text: "delay talking", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi sẽ không nói với sếp về vấn đề của Mark đâu, tốt nhất là nên để yên chuyện cũ không khơi lại.",
+                    optionsDict: [
+                        "A. continue talking (tiếp tục bới móc/nói về chuyện đó - Trái nghĩa)",
+                        "B. stop talking (Dừng nói - Đồng nghĩa)",
+                        "C. cease talking (Ngừng nói - Đồng nghĩa)",
+                        "D. delay talking"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `let sleeping dogs lie` (để yên câu chuyện không bới móc) >< `continue talking` (tiếp tục nói xới lại).",
+                    whyIncorrect: "B, C là từ đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "49. She's so disorganized - I wish she'd <b>get her act together</b>.",
+                options: [
+                    { text: "shape up", correct: false },
+                    { text: "come around", correct: false },
+                    { text: "brighten up", correct: false },
+                    { text: "brush aside", correct: true }
+                ],
+                explanation: {
+                    translation: "Cô ấy vô cùng bừa bộn thiếu tổ chức - Tôi ước gì cô ấy chấn chỉnh lại bản thân và làm việc chỉn chu hơn.",
+                    optionsDict: [
+                        "A. shape up (Chấn chỉnh chỉn chu - Đồng nghĩa)",
+                        "B. come around",
+                        "C. brighten up",
+                        "D. brush aside (v: phớt lờ, xem nhẹ không chấn chỉnh - Trái nghĩa)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `get one's act together` (chấn chỉnh nề nếp) >< `brush aside` (xem nhẹ, gạt bỏ không chấn chỉnh).",
+                    whyIncorrect: "A là từ đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "50. If you have any questions at all, please <b>feel free</b> to ask me.",
+                options: [
+                    { text: "call back", correct: false },
+                    { text: "hack off", correct: false },
+                    { text: "hang back", correct: true },
+                    { text: "hang on", correct: false }
+                ],
+                explanation: {
+                    translation: "Nếu bạn có bất kỳ câu hỏi nào, xin cứ tự nhiên hỏi tôi nhé.",
+                    optionsDict: [
+                        "A. call back",
+                        "B. hack off",
+                        "C. hang back (v: do dự, ngập ngừng, e ngại - Trái nghĩa)",
+                        "D. hang on (Đợi chút)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `feel free` (cứ tự nhiên không e ngại) >< `hang back` (do dự, ngập ngừng, e ngại).",
+                    whyIncorrect: "A, B, D sai nét nghĩa trái ngược."
+                }
+            }
+        ];
+
+        let questions = [];
+
+        function shuffleArray(array) {
+            let cur = array.slice();
+            for (let i = cur.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cur[i], cur[j]] = [cur[j], cur[i]];
+            }
+            return cur;
+        }
+
+        function initQuiz() {
+            questions = rawQuestions.map(q => {
+                let shuffledOpts = shuffleArray(q.options);
+                return {
+                    ...q,
+                    shuffledOptions: shuffledOpts,
+                    userAnswerIndex: null
+                };
+            });
+            renderQuiz();
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+
+                const optionsHTML = q.shuffledOptions.map((opt, optIdx) => {
+                    const letters = ['A', 'B', 'C', 'D'];
+                    return `
+                        <button class="opt-btn" id="opt-${idx}-${optIdx}" onclick="selectAnswer(${idx}, ${optIdx})">
+                            <span class="opt-prefix">${letters[optIdx]}</span>
+                            <span>${opt.text}</span>
+                        </button>
+                    `;
+                }).join('');
+
+                const exp = q.explanation;
+                const expDictHTML = exp.optionsDict.map(item => `<li>${item}</li>`).join('');
+
+                card.innerHTML = `
+                    <div class="q-header">
+                        <span class="q-number">Câu ${idx + 1} / ${questions.length}</span>
+                        <span class="q-type">${q.type}</span>
+                    </div>
+                    <div class="q-text">${q.question}</div>
+                    <div class="options-grid">
+                        ${optionsHTML}
+                    </div>
+                    <div class="explanation-box" id="exp-${idx}">
+                        <div class="exp-head">💡 GIẢI THÍCH CHI TIẾT TỪ MS LÊ HẰNG:</div>
+                        <div class="exp-section"><strong>1. Dịch câu hỏi:</strong> ${exp.translation}</div>
+                        <div class="exp-section">
+                            <strong>2. Phân tích 4 đáp án:</strong>
+                            <ul class="exp-list">${expDictHTML}</ul>
+                        </div>
+                        <div class="exp-section"><strong>3. Tại sao chọn đáp án này?</strong> ${exp.whyCorrect}</div>
+                        <div class="exp-section"><strong>4. Tại sao các đáp án khác sai?</strong> ${exp.whyIncorrect}</div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function selectAnswer(qIdx, optIdx) {
+            const q = questions[qIdx];
+            if (q.userAnswerIndex !== null) return;
+
+            q.userAnswerIndex = optIdx;
+            const selectedOpt = q.shuffledOptions[optIdx];
+            const isCorrect = selectedOpt.correct;
+
+            const selectedBtn = document.getElementById(`opt-${qIdx}-${optIdx}`);
+
+            if (isCorrect) {
+                selectedBtn.classList.add('correct');
+                playSound('correct');
+                triggerConfetti();
+            } else {
+                selectedBtn.classList.add('wrong');
+                playSound('wrong');
+
+                q.shuffledOptions.forEach((o, i) => {
+                    if (o.correct) {
+                        document.getElementById(`opt-${qIdx}-${i}`).classList.add('correct');
+                    }
+                });
+            }
+
+            q.shuffledOptions.forEach((_, i) => {
+                const b = document.getElementById(`opt-${qIdx}-${i}`);
+                b.disabled = true;
+                b.style.cursor = 'default';
+            });
+
+            document.getElementById(`exp-${qIdx}`).classList.add('show');
+        }
+
+        function submitQuiz() {
+            let correctCount = 0;
+
+            questions.forEach(q => {
+                if (q.userAnswerIndex !== null && q.shuffledOptions[q.userAnswerIndex].correct) {
+                    correctCount++;
+                }
+            });
+
+            const total = questions.length;
+            const percentage = Math.round((correctCount / total) * 100);
+
+            document.getElementById('score-text').innerText = `${correctCount} / ${total} (${percentage}%)`;
+
+            let comment = "";
+            if (percentage < 50) {
+                comment = "Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else if (percentage <= 80) {
+                comment = "Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else {
+                comment = "Làm tốt lắm, con cố gắng rinh điểm 10 ở lần sau nha!";
+                triggerConfetti();
+            }
+
+            document.getElementById('comment-text').innerText = comment;
+            document.getElementById('result-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('result-modal').style.display = 'none';
+        }
+
+        function triggerConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#8854C0', '#FDCB6E', '#00C9A7', '#FF7675', '#6C5CE7', '#00D26A'];
+
+            for (let i = 0; i < 60; i++) {
+                particles.push({
+                    x: canvas.width / 2,
+                    y: canvas.height / 2,
+                    vx: (Math.random() - 0.5) * 14,
+                    vy: (Math.random() - 0.7) * 14,
+                    size: Math.random() * 8 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    life: 90
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = false;
+
+                particles.forEach(p => {
+                    if (p.life > 0) {
+                        alive = true;
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.4;
+                        p.life -= 2;
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                });
+
+                if (alive) requestAnimationFrame(animate);
+                else ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            animate();
+        }
+
+        window.onload = initQuiz;
+    </script>
+</body>
+</html>
